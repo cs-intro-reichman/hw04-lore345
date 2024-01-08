@@ -76,6 +76,7 @@ public class StringOps {
             if (!isFirst&&string.charAt(i) != ' '){
                 res += lowerCase(string.charAt(i));
                 isFirst=true;
+                isCapitalLetter=false;
                 continue;
             }
             if (isCapitalLetter && string.charAt(i) != ' ') {
