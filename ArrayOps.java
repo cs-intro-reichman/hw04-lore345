@@ -32,8 +32,15 @@ public class ArrayOps {
                 max = array[i];
             }
         }
+        int count=0;
         for (int j = 0; j < array.length; j++) {
-            if (array[j] > secondMax && array[j] < max) {
+            if (array[j]==max) {
+              count++;  
+            }
+            if (count==2) {
+              return max;  
+            }
+            if (array[j] > secondMax&&array[j]<max ) {
                 secondMax = array[j];
             }
         }

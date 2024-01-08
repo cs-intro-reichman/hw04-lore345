@@ -29,16 +29,13 @@ public class StringOps {
     public static String capVowelsLowRest(String string) {
         String res = "";
         for (int i = 0; i < string.length(); i++) {
-            if (string.charAt(i) == 'i' || string.charAt(i) == 'e' || string.charAt(i) == 'o' || string.charAt(i) == 'u' || string.charAt(i) == 'a' && !isCapitalLetter(string.charAt(i))) {
+            if (string.charAt(i) == 'i' || string.charAt(i) == 'e' || string.charAt(i) == 'o' || string.charAt(i) == 'u' || string.charAt(i) == 'a') {
                 char newChar = upperCase(string.charAt(i));
                 res += newChar;
-            } else if (isCapitalLetter(string.charAt(i))) {
+            }
+            else {
                 char newChar = lowerCase(string.charAt(i));
-                res += newChar;
-
-            } else {
-                res += string.charAt(i);
-
+                res += newChar; 
             }
         }
         return res;
