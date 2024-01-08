@@ -69,9 +69,14 @@ public class StringOps {
 
     public static String camelCase(String string) {
         boolean isCapitalLetter = false;
+        boolean isFirst = false;
         String res = "";
 
         for (int i = 0; i < string.length(); i++) {
+            if (!isFirst&&string.charAt(i) != ' '){
+                res += lowerCase(string.charAt(i));
+                isFirst=true;
+            }
             if (isCapitalLetter && string.charAt(i) != ' ') {
                 res += upperCase(string.charAt(i));
                 isCapitalLetter=false;
