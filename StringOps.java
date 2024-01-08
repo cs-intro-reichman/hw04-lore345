@@ -29,7 +29,8 @@ public class StringOps {
     public static String capVowelsLowRest(String string) {
         String res = "";
         for (int i = 0; i < string.length(); i++) {
-            if (string.charAt(i) == 'i' || string.charAt(i) == 'e' || string.charAt(i) == 'o' || string.charAt(i) == 'u' || string.charAt(i) == 'a') {
+            char toCheck=lowerCase(string.charAt[i])
+            if (toCheck == 'i' || toCheck == 'e' || toCheck == 'o' || toCheck == 'u' || toCheck == 'a') {
                 char newChar = upperCase(string.charAt(i));
                 res += newChar;
             }
