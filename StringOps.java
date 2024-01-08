@@ -29,7 +29,7 @@ public class StringOps {
     public static String capVowelsLowRest(String string) {
         String res = "";
         for (int i = 0; i < string.length(); i++) {
-            char toCheck=lowerCase(string.charAt[i])
+            char toCheck=lowerCase(string.charAt(i));
             if (toCheck == 'i' || toCheck == 'e' || toCheck == 'o' || toCheck == 'u' || toCheck == 'a') {
                 char newChar = upperCase(string.charAt(i));
                 res += newChar;
