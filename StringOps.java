@@ -22,21 +22,19 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        System.out.println(capVowelsLowRest("One Two tHRee world"));
-        System.out.println(camelCase("Intro   To ComPuter"));
+        
     }
 
     public static String capVowelsLowRest(String string) {
         String res = "";
         for (int i = 0; i < string.length(); i++) {
-            char toCheck=lowerCase(string.charAt(i));
+            char toCheck = lowerCase(string.charAt(i));
             if (toCheck == 'i' || toCheck == 'e' || toCheck == 'o' || toCheck == 'u' || toCheck == 'a') {
                 char newChar = upperCase(string.charAt(i));
                 res += newChar;
-            }
-            else {
+            } else {
                 char newChar = lowerCase(string.charAt(i));
-                res += newChar; 
+                res += newChar;
             }
         }
         return res;
@@ -71,17 +69,16 @@ public class StringOps {
         String res = "";
 
         for (int i = 0; i < string.length(); i++) {
-            if (!isFirst&&string.charAt(i) != ' '){
+            if (!isFirst && string.charAt(i) != ' ') {
                 res += lowerCase(string.charAt(i));
-                isFirst=true;
-                isCapitalLetter=false;
+                isFirst = true;
+                isCapitalLetter = false;
                 continue;
             }
             if (isCapitalLetter && string.charAt(i) != ' ') {
                 res += upperCase(string.charAt(i));
-                isCapitalLetter=false;
-            }
-            else if (string.charAt(i) != ' ' && !isCapitalLetter) {
+                isCapitalLetter = false;
+            } else if (string.charAt(i) != ' ' && !isCapitalLetter) {
 
                 res += lowerCase(string.charAt(i));
 
@@ -96,10 +93,26 @@ public class StringOps {
         return res;
 
 
-}
+    }
 
-public static int[] allIndexOf(String string, char chr) {
-    // Write your code here:
-    return new int[1];
-}
+    public static int[] allIndexOf(String string, char chr) {
+        int count = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == chr) {
+                count++;
+            }
+
+        }
+        int[] arr = new int[count];
+        int idx=0;
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == chr) {
+                arr[idx] = i;
+                idx++;
+            }
+
+        }
+        return arr;
+
+    }
 }
