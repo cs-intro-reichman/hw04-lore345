@@ -18,7 +18,6 @@ public class ArrayOps {
 
         }
 
-
         // The missing integer is the difference between expected and actual sum
         return expectedSum - actualSum;
     }

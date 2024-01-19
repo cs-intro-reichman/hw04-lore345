@@ -29,6 +29,10 @@ public class StringOps {
         String res = "";
         for (int i = 0; i < string.length(); i++) {
             char toCheck = lowerCase(string.charAt(i));
+            /* 
+  		why didn't you create a helper isVowel()?
+		could be a lot cleaner
+  		*/
             if (toCheck == 'i' || toCheck == 'e' || toCheck == 'o' || toCheck == 'u' || toCheck == 'a') {
                 char newChar = upperCase(string.charAt(i));
                 res += newChar;
@@ -39,7 +43,8 @@ public class StringOps {
         }
         return res;
     }
-
+    
+    // very good helper function!!!
     public static boolean isCapitalLetter(char c) {
         // Compare ASCII values to check if the character is an uppercase letter
         return c >= 'A' && c <= 'Z';
